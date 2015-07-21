@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html ng-app="listimage">
+<head>
+	<meta charset="utf-8" />
+    <title>images</title>
+	
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-resource.js"></script>	
+</head>
+
+	<body ng-controller="listcontroller as list" ng-cloak>
+			<div photobig  class="thumbnail-element" ng-repeat="post in list.posts">
+				<img  class="thumb" ng-src="{{post.thumbnailUrl}}"  >
+				<p class="thumb-title" >{{post.title}}</p>
+			</div>
+	</body>
+</html>
+<script src="listimage.module.js"></script>
+<script src="listcontroller.js"></script>
+<script src="postsfactory.js"></script>
+<script src="bigphoto.js"></script>
+
